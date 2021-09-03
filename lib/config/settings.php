@@ -22,7 +22,7 @@ return array(
         'value'         => '',
         'title'         => 'Описание заказа',
         'description'   => 'Описание заказу будет отображаться при оплате в системе ЕРИП',
-        'control_type'  => 'help'
+        'control_type'  => 'input'
     ),
     'ERIP_EXPRESSPAY_TESTMODE' => array(
         'value'         => false,
@@ -30,9 +30,15 @@ return array(
         'description'   => '',
         'control_type' => 'checkbox'
     ),
+    'ERIP_EXPRESSPAY_ERIP_PATH' => array(
+        'value'         => '',
+        'title'         => 'Путь по ветке ЕРИП',
+        'description'   => 'Путь по ветке ЕРИП который указан в настройках услуги',
+        'control_type'  => 'input'
+    ),
     'ERIP_EXPRESSPAY_SUCCESS_URL' => array(
         'value'         => '',
-        'title'         => 'SUCCESS_URL',
+        'title'         => 'URL Успеха',
         'description'   => 'Оставить пустым, если не требуется доп. данных на checkout/success',
         'control_type'  => 'input'
     ),
