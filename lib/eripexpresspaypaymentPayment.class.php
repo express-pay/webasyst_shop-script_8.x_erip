@@ -295,6 +295,8 @@ class eripexpresspaypaymentPayment extends waPayment implements waIPayment
             $transaction_data['type'] = self::OPERATION_AUTH_CAPTURE;
         } elseif ($data['CmdType'] == 2) {
             $transaction_data['type'] = self::OPERATION_CANCEL;
+        } elseif ($data['CmdType'] == 3 && $data['Status'] == 3) {
+            $transaction_data['type'] = self::OPERATION_AUTH_CAPTURE;
         }
 
         $transaction_data['native_id'] =  $data['PaymentNo'];
